@@ -1,24 +1,13 @@
-# README
+Build & run instruction:
+1. Go to project folder
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+2. RUN: docker build -t test .
 
-Things you may want to cover:
+3. RUN: docker run -p 3000:3000 test
 
-* Ruby version
+Test with curl:
 
-* System dependencies
+curl -X GET http://localhost:3000/find_routes\?source\=Holland%20Village\&destination\=Bugis
+curl -X GET http://localhost:3000/find_routes_bonus\?source\=Boon%20Lay\&destination\=Little%20India\&time\=2019-08-05T07:00
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*All unit tests are in spec folder
